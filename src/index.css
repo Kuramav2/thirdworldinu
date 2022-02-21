@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Mukta", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #8795fa;
+}
+
+code {
+  font-family: "Mukta", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #8795fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5562c5;
+}
+
+@font-face {
+  font-family: barabara;
+  src: url(../public/fonts/BARABARA-final.otf);
+}
+
+.barabara {
+  font-weight: 100;
+  font-family: barabara;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 144px;
+  height: 144px;
+  margin: auto;
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
