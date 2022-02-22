@@ -20,23 +20,31 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="container mx-auto flex px-5 py-36 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-40 items-center text-center">
-          <h1 className="mb-5 sm:text-7xl font-bold text-5xl items-center Avenir xl:w-2/2 text-white">
+      <div className="container mx-auto mt-28 flex flex-col items-center px-5 py-36 lg:flex-row">
+        <div
+          className="ml-0 mb-40 flex flex-col items-center scroll-smooth pt-6 text-center sm:ml-2 md:ml-0 md:w-1/2 md:items-start lg:ml-4 lg:flex-grow lg:text-left"
+          id="home"
+        >
+          <div className="mb-12 mr-24 block sm:mr-0 sm:mb-28 lg:mb-16 lg:hidden xl:mr-44">
+            <img
+              className="ml-12 w-[35rem] rounded-2xl md:ml-1"
+              alt="Hero"
+              src="https://cdn.discordapp.com/attachments/945342091960147968/945358588103249950/third_world_inu_logo_2.png"
+            />
+          </div>
+          <h1 className="Avenir xl:w-2/2 mb-5 items-center text-5xl font-bold text-white sm:text-7xl">
             The ERC-20 Coin
-            <br /> that gives back
+            <br className="hidden xl:block" /> that gives back
           </h1>
-
-          <p className="mb-4 xl:w-3/4 font-semibold text-white text-lg">
+          <p className="mb-4 text-lg font-semibold text-white xl:w-3/4">
             With the combination of the teams background, as well as the news
             that is always around the world, we have decided to make a coin
             based on giving back to those in need
           </p>
-
           <div className="flex justify-center">
             <motion.div whileHover={{ scale: 1.05 }}>
               <a
-                className="inline-flex items-center lg:px-8 lg:py-4 py-2 px-6 lg:text-sm mt-2 text-[11px] font-semibold text-white transition duration-500 ease-in-out transform rounded-full bg-black barabara"
+                className="barabara mt-2 inline-flex transform items-center rounded-full bg-black py-3 px-4 text-[11px] font-semibold text-white transition duration-500 ease-in-out lg:px-8 lg:py-4 lg:text-sm"
                 href="/"
               >
                 <span className="justify-center text-[11px]">
@@ -46,7 +54,7 @@ export default function Home() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }}>
               <a
-                className="inline-flex items-center lg:px-8 lg:py-4 py-2 px-6 ml-10 mt-2  font-semibold text-white transition duration-500 ease-in-out transform rounded-full bg-[#2896cc] border-2 border-black barabara"
+                className="barabara ml-10 mt-2 inline-flex transform items-center rounded-full border-2  border-black bg-[#2896cc] py-3 px-4 font-semibold text-white transition duration-500 ease-in-out lg:px-8 lg:py-4"
                 href="https://t.me/ThirdWorldInu"
               >
                 <span className="justify-center text-[11px]">TELEGRAM</span>
@@ -55,33 +63,37 @@ export default function Home() {
           </div>
         </div>
         <animated.div
+          className="hidden lg:block"
           onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })}
           style={{ transform: props.xys.interpolate(trans) }}
         >
-          <div className="xl:mr-44 sm:mr-0 mb-12 sm:mb-28 lg:mb-16 mr-48 md:pl-10">
+          <div className="mb-12 mr-48 sm:mr-0 sm:mb-28 md:pl-10 lg:mb-16 xl:mr-44">
             <img
-              className="w-[35rem] md:ml-1 ml-24 rounded-2xl"
+              className="ml-24 w-[35rem] rounded-2xl md:ml-1"
               alt="Hero"
               src="https://cdn.discordapp.com/attachments/945342091960147968/945358588103249950/third_world_inu_logo_2.png"
             />
           </div>
         </animated.div>
       </div>
-      <div className="w-full bg-[url('https://cdn.discordapp.com/attachments/931202903195127839/945418018756898856/HumanitarianRelief.png')] bg-no-repeat bg-cover">
-        <div className="container mx-auto flex px-5 py-24 lg:flex-row flex-col items-center">
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <div
+        className="w-full scroll-smooth bg-[url('https://cdn.discordapp.com/attachments/931202903195127839/945418018756898856/HumanitarianRelief.png')] bg-cover bg-no-repeat"
+        id="about"
+      >
+        <div className="container mx-auto flex flex-col items-center px-5 py-24 lg:flex-row">
+          <div className="mb-10 w-5/6 md:mb-0 md:w-1/2 lg:w-full lg:max-w-lg">
             <img
               className="w-[35rem] rounded-2xl"
               alt="Hero"
               src="https://cdn.discordapp.com/attachments/945342091960147968/945358588103249950/third_world_inu_logo_2.png"
             />
           </div>
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 className="title-font sm:text-5xl text-3xl mb-4 font-bold text-white">
+          <div className="flex flex-col items-center text-center md:w-1/2 md:items-start md:pl-16 md:text-left lg:flex-grow lg:pl-24">
+            <h1 className="mb-4 text-3xl font-bold text-white sm:text-5xl">
               What is Third World Inu about?
             </h1>
-            <p className="mb-8 mt-4 leading-relaxed text-lg font-semibold text-white">
+            <p className="mb-8 mt-4 text-lg font-semibold leading-relaxed text-white">
               With the everlasting news of third world countries in need, we
               felt the need to bring something to change the world for those who
               are in dire need of humanitarian relief. We believe that every
@@ -97,25 +109,24 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full">
-        <div className="text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-              <div className="p-4 md:w-1/4 flex flex-col mt-6">
+        <div className="body-font text-gray-600">
+          <div className="container mx-auto px-5 py-24">
+            <div className="-mx-4 -mb-10 -mt-4 flex flex-wrap space-y-6 sm:-m-4 md:space-y-0">
+              <div className="mt-6 flex flex-col p-4 md:w-1/4">
                 <div className="flex-grow">
-                  <h2 className="text-white text-4xl font-bold mb-3">
+                  <h2 className="mb-3 text-4xl font-bold text-white">
                     How To Buy
                   </h2>
-                  <p className="leading-relaxed text-lg mt-4 text-white">
+                  <p className="mt-4 text-lg leading-relaxed text-white">
                     Here is how to buy, and help our cause:
                   </p>
                 </div>
               </div>
-              <div className="p-4 md:w-1/4 flex flex-col text-center items-center">
-                <div className="w-20 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0">
+              <div className="flex flex-col items-center p-4 text-center md:w-1/4">
+                <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    id="Capa_1"
                     x="0px"
                     y="0px"
                     width="80px"
@@ -144,21 +155,20 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-white text-3xl title-font font-medium mb-3">
+                  <h2 className="mb-3 text-3xl font-medium text-white">
                     1. Step
                   </h2>
-                  <p className="leading-relaxed text-lg text-white">
+                  <p className="text-lg leading-relaxed text-white">
                     Start by downloading MetaMask or TrustWallet as app to your
                     mobile device or install the browser extension.
                   </p>
                 </div>
               </div>
-              <div className="p-4 md:w-1/4 flex flex-col text-center items-center">
-                <div className="w-20 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0">
+              <div className="flex flex-col items-center p-4 text-center md:w-1/4">
+                <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    id="Capa_1"
                     x="0px"
                     y="0px"
                     width="80px"
@@ -187,21 +197,20 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-white text-3xl title-font font-medium mb-3">
+                  <h2 className="mb-3 text-3xl font-medium text-white">
                     2. Step
                   </h2>
-                  <p className="leading-relaxed text-lg text-white">
+                  <p className="text-lg leading-relaxed text-white">
                     Buy ETH on an exchange (i.e. Binance, Kraken, Coinbase etc.)
                     and transfer the tokens to your MetaMask wallet adress.
                   </p>
                 </div>
               </div>
-              <div className="p-4 md:w-1/4 flex flex-col text-center items-center">
-                <div className="w-20 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0">
+              <div className="flex flex-col items-center p-4 text-center md:w-1/4">
+                <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    id="Capa_1"
                     x="0px"
                     y="0px"
                     width="80px"
@@ -230,10 +239,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-white text-3xl title-font font-medium mb-3">
+                  <h2 className="mb-3 text-3xl font-medium text-white">
                     3. Step
                   </h2>
-                  <p className="leading-relaxed text-lg text-white">
+                  <p className="text-lg leading-relaxed text-white">
                     Swap ETH for $TWI (on UniSwap). Now add Third World Inu to
                     your Metamask or TrustWallet to view your $TWI.
                   </p>
@@ -244,18 +253,17 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full bg-[#5562c5]">
-        <div className="container px-5 py-24 mx-auto mt-24">
-          <h1 className="sm:text-5xl text-2xl font-bold title-font text-center text-white mb-20">
+        <div className="container mx-auto mt-24 px-5 py-24">
+          <h1 className="mb-20 text-center text-2xl font-bold text-white sm:text-5xl">
             Our Tokenomics
           </h1>
-          <div className="container px-5 mx-auto">
-            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6 ">
-              <div className="p-4 md:w-1/3 flex flex-col text-center items-center ">
-                <div className="w-20 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0">
+          <div className="container mx-auto">
+            <div className="-mx-4 -mb-10 -mt-4 block flex-wrap space-y-6 sm:-m-4 md:mx-auto md:flex md:space-y-0 ">
+              <div className="flex flex-col items-center p-4 text-center md:w-1/3">
+                <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    id="Layer_1"
                     x="0px"
                     y="0px"
                     width="80px"
@@ -285,21 +293,20 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-white text-2xl title-font font-bold mb-3">
+                  <h2 className="mb-3 text-xl font-bold text-white lg:text-2xl">
                     3% charity
                   </h2>
-                  <p className="leading-relaxed text-base text-white w-64">
+                  <p className="w-34 text-[11px] leading-relaxed text-white lg:w-64 lg:text-base">
                     3% of every buy and sell goes straight to the charity
                     wallet, directly donated to a charity.
                   </p>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                <div className="w-20 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0">
+              <div className="flex flex-col items-center p-4 text-center md:w-1/3">
+                <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    id="Capa_1"
                     x="0px"
                     y="0px"
                     width="80px"
@@ -326,21 +333,20 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-white text-2xl title-font font-bold mb-3">
+                  <h2 className="mb-3 text-xl font-bold text-white lg:text-2xl">
                     5% Marketing
                   </h2>
-                  <p className="leading-relaxed text-base text-white w-64">
+                  <p className="w-34 text-[11px] leading-relaxed text-white lg:w-64 lg:text-base">
                     5% of every buy and sell will be used to further the reach
                     of our coin, including CEX listings.
                   </p>
                 </div>
               </div>
-              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                <div className="w-20 h-20 inline-flex items-center justify-center mb-5 flex-shrink-0">
+              <div className="flex flex-col items-center p-4 text-center md:w-1/3">
+                <div className="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    id="Capa_1"
                     x="0px"
                     y="0px"
                     width="80px"
@@ -373,10 +379,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-white text-2xl title-font font-bold mb-3">
+                  <h2 className="mb-3 text-xl font-bold text-white lg:text-2xl">
                     2% liquidity
                   </h2>
-                  <p className="leading-relaxed text-base text-white w-64">
+                  <p className="w-34 text-[11px] leading-relaxed text-white lg:w-64 lg:text-base">
                     2% of every buy and sell going straight to the Liquidity
                     pool to hold a stable floor.
                   </p>
@@ -386,54 +392,48 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full mb-24 mt-12">
+      <div className="mb-24 mt-12 w-full">
         <div className="text-white">
-          <div className="container px-5 py-24 mx-auto">
-            <h1 className="sm:text-5xl text-2xl font-bold title-font text-center text-white mb-16">
+          <div className="container mx-auto px-5 py-24">
+            <h1 className="mb-16 text-center text-2xl font-bold text-white sm:text-5xl">
               Charities that we've donated to
             </h1>
             <div className="flex flex-wrap ">
               <div className="p-4 md:w-1/3">
-                <div className="h-full overflow-hidden bg-white rounded-2xl">
+                <div className="h-full overflow-hidden rounded-2xl bg-white">
                   <img
-                    className="lg:h-60 md:h-36 w-full object-contain object-center"
+                    className="h-96 w-full object-none object-center md:h-36 lg:h-60"
                     src="https://cdn.discordapp.com/attachments/945342091960147968/945439808312975440/IMG_0757.png"
                     alt=""
                   />
                   <div className="p-6">
-                    <h2 className="text-3xl title-font font-bold text-black mb-1">
-                      TBA
-                    </h2>
+                    <h2 className="mb-1 text-3xl font-bold text-black">TBA</h2>
                     <p className="mb-3 text-lg text-black">TBA</p>
                   </div>
                 </div>
               </div>
               <div className="p-4 md:w-1/3">
-                <div className="h-full overflow-hidden bg-white rounded-2xl">
+                <div className="h-full overflow-hidden rounded-2xl bg-white">
                   <img
-                    className="lg:h-60 md:h-36 w-full object-contain object-center"
+                    className="h-[600px] w-full object-none object-center md:h-36 lg:h-60"
                     src="https://cdn.discordapp.com/attachments/945342091960147968/945437164349579314/IMG_0755.png"
                     alt=""
                   />
                   <div className="p-6">
-                    <h2 className="text-3xl title-font font-bold text-black mb-1">
-                      TBA
-                    </h2>
+                    <h2 className="mb-1 text-3xl font-bold text-black">TBA</h2>
                     <p className="mb-3 text-lg text-black">TBA</p>
                   </div>
                 </div>
               </div>
               <div className="p-4 md:w-1/3">
-                <div className="h-full overflow-hidden bg-white rounded-2xl">
+                <div className="h-full overflow-hidden rounded-2xl bg-white">
                   <img
-                    className="lg:h-60 md:h-36 w-full object-fit object-center"
+                    className="h-96 w-full object-none object-center md:h-36 lg:h-60"
                     src="https://cdn.discordapp.com/attachments/945342091960147968/945440021165531136/IMG_0758.png"
                     alt=""
                   />
                   <div className="p-6">
-                    <h2 className="text-3xl title-font font-bold text-black mb-1">
-                      TBA
-                    </h2>
+                    <h2 className="mb-1 text-3xl font-bold text-black">TBA</h2>
                     <p className="mb-3 text-lg text-black">TBA</p>
                   </div>
                 </div>
@@ -442,7 +442,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#5562c5] py-32">
+      <div className="w-full scroll-smooth bg-[#5562c5] py-32" id="roadmap">
         <Timeline />
       </div>
       <Footer />

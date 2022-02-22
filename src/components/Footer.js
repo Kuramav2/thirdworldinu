@@ -2,11 +2,11 @@
 export default function Footer() {
   return (
     <>
-      <footer className="text-gray-600 body-font">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <footer className="body-font text-gray-600">
+        <div className="container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row">
           <a
             href="/"
-            className="flex font-medium items-center md:justify-start justify-center text-gray-900"
+            className="flex items-center justify-center font-medium text-gray-900 md:justify-start"
           >
             <img
               src="https://cdn.discordapp.com/attachments/712089569041973270/945341665705623682/third_world_inu_logo_1.png"
@@ -14,10 +14,10 @@ export default function Footer() {
               className="w-14"
             />
           </a>
-          <p className="text-lg text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-6">
-            © 2022 - The World Inu
+          <p className="mt-6 text-lg text-white sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:pl-4">
+            © 2022 - The Third World Inu
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <span className="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
             <a href="https://t.me/ThirdWorldInu" className="text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -12,7 +12,7 @@ export default function Timeline() {
           className="vertical-timeline-element--work"
           iconStyle={{ background: "#8795fa", color: "#fff" }}
         >
-          <h3 className="text-black font-bold text-3xl">Phase 1</h3>
+          <h3 className="text-3xl font-bold text-black">Phase 1</h3>
           <ul className="mt-2">
             <li>- Launch</li>
             <li>- Telegram based marketing takes off</li>
@@ -27,7 +27,7 @@ export default function Timeline() {
           className="vertical-timeline-element--work"
           iconStyle={{ background: "#8795fa", color: "#fff" }}
         >
-          <h3 className="text-black font-bold text-3xl">Phase 2</h3>
+          <h3 className="text-3xl font-bold text-black">Phase 2</h3>
           <ul className="mt-2">
             <li>- Charitable organisations partnerships</li>
             <li>- Certik Audit</li>
@@ -41,7 +41,7 @@ export default function Timeline() {
           className="vertical-timeline-element--work"
           iconStyle={{ background: "#8795fa", color: "#fff" }}
         >
-          <h3 className="text-black font-bold text-3xl">Phase 3</h3>
+          <h3 className="text-3xl font-bold text-black">Phase 3</h3>
           <ul className="mt-2">
             <li>- TBA</li>
           </ul>
